@@ -1,16 +1,67 @@
-# recipe_finder
+# 🍽️ Recipe Finder App (Flutter)
 
-A new Flutter project.
+A clean and modern **Flutter Recipe Finder application** built using **Clean Architecture + BLoC**, powered by **TheMealDB API**.  
+Users can search recipes, filter by category & cuisine, view recipe details, and save favorites with local persistence.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Features
 
-A few resources to get you started if this is your first Flutter project:
+- 🔍 Search recipes by name (debounced search)
+- 🏷 Filter recipes by **Category** and **Cuisine (Area)**
+- 🔄 Toggle between **Grid** and **List** view
+- ❤️ Mark recipes as **Favorites** (persistent using Hive)
+- 📄 Detailed recipe view with:
+  - Overview
+  - Ingredients
+  - Step-by-step Instructions
+- ▶️ YouTube recipe video integration
+- 🔎 Zoomable recipe image
+- ⚡ Shimmer loading placeholders
+- 📦 Offline persistence for favorites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🏗 Architecture
+
+This project follows **Clean Architecture** principles:
+
+- **State Management:** flutter_bloc
+- **Dependency Injection:** get_it
+- **Local Storage:** Hive
+- **Networking:** Dio
+- **Image Caching:** cached_network_image
+
+---
+
+## 📱 Screens Implemented
+
+- Recipe List Page
+- Recipe Detail Page (Tabs: Overview / Ingredients / Instructions)
+- Favorites Page
+- Image Viewer Page (Zoom support)
+
+---
+
+## 🧪 Known Limitations (Intentional)
+
+- Combined filtering (Category + Area simultaneously) is currently **basic**
+  - Logic can be enhanced by intersecting filters
+- No pagination (API limitation)
+- Offline recipe browsing not supported (except favorites)
+
+> These trade-offs were made to keep the assignment clean and focused.
+
+---
+
+## 🚀 How to Run
+
+### Prerequisites
+- Flutter SDK (stable)
+- Android Studio / VS Code
+- Android device or emulator
+
+### Steps
+```bash
+flutter pub get
+flutter run
